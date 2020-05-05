@@ -127,7 +127,7 @@ class motor:
         '''
         # convert from Hz to steps per 10,000 sec
         speed = speed * 10000
-        if (speed > 500000000 | speed < 0): # don't let speed exceed max
+        if (speed > 500000000 | speed < 0): # don't let speed exceed bounds
             speed = 50000000 # default for Lin 211-18-01 at 1200 RPM
         # encode speed into bytes
         self.send_cmd(0xE5,(((speed >>  7) & 1) | ((speed >> 14) & 2) |
