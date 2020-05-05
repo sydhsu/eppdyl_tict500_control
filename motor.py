@@ -120,7 +120,7 @@ class motor:
     def rev(self):
         self.send_cmd(0x86)
 
-    def set_speed(self,speed=0xC8):
+    def set_speed(self,speed=50000000):
         '''
         Sets max. starting speed at which acceleration/deceleration is allowed. Default value from Tic is 200 steps per second.
         Speed may be 0-500,000,000 steps per 10,000 seconds (0-50kHz)
